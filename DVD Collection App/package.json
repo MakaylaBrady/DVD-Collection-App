@@ -1,0 +1,22 @@
+{
+  "name": "dvd-collection-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tailwind": "npx tailwindcss -i views/css/input.css -o views/css/styles.css --watch",
+    "dev": "nodemon controllers/server.js",
+    "server": "node controllers/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "tailwindcss": "^3.0.23"
+  },
+  "dependencies": {
+    "express": "^4.17.3",
+    "pg": "^8.7.3"
+  }
+}

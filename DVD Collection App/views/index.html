@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/styles.css" rel="stylesheet">
+</head>
+
+<body class="bg-neutral-300 text-gray-900 font-medium">
+    <nav class="w-screen bg-[#1B1B1B] flex h-20 justify-center items-center mb-14">
+        <p class="text-zinc-300 font-semibold text-2xl">DVD Collection</p>
+    </nav>
+
+    <div class="pl-10">
+        <!-- load dvd input -->
+        <form class="mb-5">
+            <label for="myfile" class="">Load DVD:</label>
+            <input class="load-file" type="file" accept=".txt" name="myfile">
+        </form>
+
+        <main class="main-section">
+            <!-- add and display -->
+            <section class="pb-2">
+                <!-- add button -->
+                <input
+                    class="h-10 bg-[#444444] hover:bg-[#757575] text-gray-300 px-5 py-1 rounded-sm hover:cursor-pointer"
+                    type="button" value="Add" name="myfile" id="add">
+
+                <!-- display by -->
+                <select class="display-by ml-1 h-10 px-3 bg-neutral-400 rounded-sm outline-none" name="display">
+                    <option value="all" selected>Display all</option>
+                    <option value="category">Display all DVDs by a specified category
+                    </option>
+                    <option value="year">Display the collection of DVDs by year
+                    </option>
+                </select>
+                <input
+                    class="hidden display-type ml-2 h-10 px-3 bg-neutral-400  rounded-sm outline-none placeholder-neutral-500"
+                    placeholder="Type..." name="myfile">
+            </section>
+
+            <!-- new dvd inputs -->
+            <section class="py-2 pb-4 hidden add-section">
+                <form action="" method="post">
+                    <input required
+                        class="title-input dvd-input h-10 px-3 bg-neutral-400  rounded-sm outline-none placeholder-neutral-500"
+                        placeholder="Title..." name="myfile">
+
+                    <input required
+                        class="category-input dvd-input ml-2 h-10 px-3 bg-neutral-400  rounded-sm outline-none placeholder-neutral-500"
+                        placeholder="Category..." name="myfile">
+
+                    <input required
+                        class="runtime-input dvd-input ml-2 h-10 px-3 bg-neutral-400  rounded-sm outline-none placeholder-neutral-500"
+                        placeholder="Runtime..." name="myfile">
+
+                    <input required
+                        class="year-input dvd-input ml-2 h-10 px-3 bg-neutral-400  rounded-sm outline-none placeholder-neutral-500"
+                        placeholder="Year..." name="myfile">
+
+                    <input required
+                        class="price-input dvd-input ml-2 h-10 px-3 bg-neutral-400  rounded-sm outline-none placeholder-neutral-500"
+                        placeholder="Price..." name="myfile">
+
+                    <button
+                        class="add-button bg-[#444444] hover:bg-[#757575] text-gray-300 px-4 h-10 rounded-sm hover:cursor-pointer ml-2">Add</button>
+                </form>
+            </section>
+
+            <!-- dvd content -->
+            <section class="dvd-content">
+                <form action="">
+                    <table class="text-center test w-[70%]">
+
+                        <!-- table header -->
+                        <tr class="text-xl">
+                            <th class="w-[15%] text-neutral-200 bg-neutral-600 px-2 py-2 font-semibold">Title</th>
+                            <th class="w-[15%] text-neutral-200 bg-neutral-600 px-2 py-2 font-semibold">Category</th>
+                            <th class="w-[15%] text-neutral-200 bg-neutral-600 px-2 py-2 font-semibold">Runtime</th>
+                            <th class="w-[15%] text-neutral-200 bg-neutral-600 px-2 py-2 font-semibold">Year</th>
+                            <th class="w-[15%] text-neutral-200 bg-neutral-600 px-2 py-2 font-semibold">Price</th>
+                            <th class="w-[15%]"></th>
+                        </tr>
+
+                    </table>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="/models/displayDVD.js"></script>
+    <script src="/models/addDVD.js"></script>
+    <script src="/models/displayBy.js"></script>
+    <script src="/models/loadFile.js"></script>
+    <script src="/models/getDVD.js"></script>
+</body>
+
+</html>
